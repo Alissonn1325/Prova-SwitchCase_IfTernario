@@ -12,8 +12,22 @@
 
     //ENTRADA
 
-
+    const valorPC = Number(prompt("Quanto que Custa o PC Gamer?"));
+    const parcelas = Number(prompt("Em quantas parcelas ira pagar?"));
+    
     //PROCESSAMENTO
+
+    const parcela1 = valorPC - (valorPC * 5/100)
+    const parcelas6 = valorPC + (valorPC * 3/100)
+    const parcelas12 = valorPC + (valorPC * 8/100)
+    const parcelasMaior12 = valorPC + (valorPC * 12/100);
+
+    (parcelas === 1) ? alert(`Parabéns! Ganhou um Desconto de 5%! ${parcela1.toFixed(2)}`)
+    :(parcelas <= 6) ? alert(`Juros de 3% na Sua Compra! ${parcelas6.toFixed(2)}`)
+    :(parcelas <= 12) ? alert(`Juros de 8% na Sua Compra! ${parcelas12.toFixed(2)}`)
+    : alert(`Juros de 12% na Sua Compra! ${parcelasMaior12.toFixed(2)}`);
+
+
 
 
     //SAÍDA

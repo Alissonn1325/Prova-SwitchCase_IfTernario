@@ -11,6 +11,31 @@
 
     //ENTRADA
 
+    const valorCelular = Number(prompt("Qual o valor do celular?"))
+    const formaPag = prompt("Como desejas pagar? (P) Pix | (D) Dinheiro | (B) Boleto").toUpperCase();
+
+    const descontoPix = valorCelular - (valorCelular * 7/100)
+    const descontoDinheiro = valorCelular - (valorCelular * 5/100)
+    const descontoBoleto = valorCelular - (valorCelular * 3/100)
+
+    switch (formaPag) {
+        case "P":
+            alert(`Você Pagou Com PIX!`)
+            document.write(`Valor do Celular com Desconto: ${descontoPix.toFixed(2)}`)
+            break;
+            case "D":
+            alert(`Você Pagou Com Dinheiro!`)
+            document.write(`Valor do Celular com Desconto: ${descontoDinheiro.toFixed(2)}`)
+            break;
+            case "B":
+            alert(`Você Pagou Com Boleto!`)
+            document.write(`Valor do Celular com Desconto: ${descontoBoleto.toFixed(2)}`)
+            break;
+        default:
+            alert(`INVALIDO!`)
+            break;
+    }
+
 
     //PROCESSAMENTO
 

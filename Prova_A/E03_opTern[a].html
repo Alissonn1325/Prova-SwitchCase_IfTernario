@@ -16,6 +16,15 @@
 
     //ENTRADA
 
+    const opMatematica = Number(prompt("Quantas operações matematicas você usou?"));
+    const funcaoSE = Number(prompt("Quantas funções (=SE) você usou?"));
+    const funcaoPROCV = Number(prompt("Quantas funções (=PROCV) você usou?"));
+
+    const pontosFinais = (opMatematica * 1.5) + (funcaoSE * 4) + (funcaoPROCV * 7);
+
+    pontosFinais <= 20 ? alert(`Prova Iniciante. Pontos: ${pontosFinais.toFixed(2)}`)
+    : alert(`Prova Intermediária. Pontos: ${pontosFinais.toFixed(2)}`);
+
 
     //PROCESSAMENTO
 
